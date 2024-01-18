@@ -1,6 +1,6 @@
 ---
 title: CocoaPods 的使用
-date: 2017-08-12 22:00:13
+date: 2017-08-12 22:00:13 +0800
 categories: [iOS]
 tags: [CocoaPods]
 ---

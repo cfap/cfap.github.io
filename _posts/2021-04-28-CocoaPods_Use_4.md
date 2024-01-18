@@ -1,6 +1,6 @@
 ---
 title: CocoaPods 使用：podspec 文件参数详解
-date: 2021-04-28 17:31:17
+date: 2021-04-28 17:31:17 +0800
 categories: [iOS]
 tags: [CocoaPods]
 ---

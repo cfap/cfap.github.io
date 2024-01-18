@@ -1,6 +1,6 @@
 ---
 title: 高胆固醇血症
-date: 2024-01-15 14:24:06
+date: 2024-01-15 14:24:06 +0800
 categories: [医学]
 img_path: /assets/img/
 math: true

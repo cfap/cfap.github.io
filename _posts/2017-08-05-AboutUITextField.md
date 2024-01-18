@@ -1,6 +1,6 @@
 ---
 title: 关于 UITextField 和 键盘 的通知、代理调用顺序
-date: 2017-08-05 10:36:54
+date: 2017-08-05 10:36:54 +0800
 categories: [iOS]
 tags: [UI]
 ---
