@@ -46,10 +46,10 @@ math: true
 * 低密度脂蛋白胆固醇：LDL-C
 * 脂蛋白(a)：别名 LPA、APOA、Lp(a)，是低密度脂蛋白的变体，含有载脂蛋白(a)，是动脉粥样硬化相关疾病的危险因素。
 
-`计算公式`
+`LDL-C 估算公式，单位 mmol/L，结果存在局限性`
 
 $$
-LDL\mbox{-}C \approx TC - HDL\mbox{-}C - \frac{TG}{5}
+LDL\mbox{-}C \approx TC - HDL\mbox{-}C - \frac{TG}{2.2}
 $$
 
 <br>
