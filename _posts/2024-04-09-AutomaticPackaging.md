@@ -1,5 +1,5 @@
 ---
-title: 用 Shell 脚本自动化实现从 Unity 导出 iOS 工程、打包、上传
+title: 用 Shell 脚本实现自动化从 Unity 导出 iOS 工程、打包、上传
 date: 2024-04-19 15:47:55 +0800
 categories: [iOS]
 ---
@@ -9,7 +9,7 @@ categories: [iOS]
 * Shell 脚本内容根据自己项目按需修改
 * 如果将 Shell 脚本保存为 `XXX.sh` 文件，在 macOS 上的终端执行脚本即可完成所有操作：`sh XXX.sh`
 * 如果将 Shell 脚本保存为 `XXX.command` 文件，只需双击文件，即可执行脚本，完成所有操作，首次需要先赋予执行权限，之后双击即可执行。
-* 如果是不涉及 Unity 相关的纯 iOS 项目，把从 Unity 导出 iOS 工程相关的代码删去即可
+* 如果是不涉及 Unity 相关的纯 iOS 项目，把从 Unity 导出 iOS 工程相关的代码删去即可。
 
 <br>
 
@@ -215,13 +215,13 @@ echo
 
 ```
 
-## Unity 的 C#脚本
+## Unity 的 C# 脚本
 
 `ExportProject.cs` 文件如下
 
 <br>
 
-``` C#
+``` c#
 using UnityEditor;
 using UnityEngine;
 
