@@ -176,7 +176,42 @@ echo "============ Upload PGYER Success ======================"
 ## 返回结果码，其中0为成功上传，因为返回结果中带回来的有中文显示乱码，无法利用jq解析
 
 
-## 如需上传到fim，可查阅 https://www.betaqr.com/docs/publish 文档
+# 如需上传到fim，可查阅 https://www.betaqr.com/docs/publish 文档，需要分两步，先获取凭证，再用凭证上传包
+# macOS 上需要先安装 jq 工具解析 json，安装命令：brew install jq
+
+# echo "============ Upload fir.im Begin ======================="
+
+# FIR_GET_TICKET_RESULT=`curl -X "POST" "http://api.appmeta.cn/apps" \
+# -H "Content-Type: application/json" \
+# -d "{\"type\":\"ios\", \"bundle_id\":\"com.xxxxxxxx\", \"api_token\":\"xxxxxxxxxxxxxxxxxxxxxxxx\"}"`
+
+# echo
+
+# fir_key=$(echo $FIR_GET_TICKET_RESULT | jq -r '.cert.binary.key')
+# fir_token=$(echo $FIR_GET_TICKET_RESULT | jq -r '.cert.binary.token')
+# fir_upload_url=$(echo $FIR_GET_TICKET_RESULT | jq -r '.cert.binary.upload_url')
+
+# APP_NAME=$(sed -n '/INFOPLIST_KEY_CFBundleDisplayName = /{s/INFOPLIST_KEY_CFBundleDisplayName = //;s/;//;s/^[[:space:]]*//;s/"//g;p;q;}' ${PROJECT_PATH}/project.pbxproj)
+
+# FIR_UPLOAD_RESULT=`curl \
+# -F "key=$fir_key" \
+# -F "token=$fir_token" \
+# -F "file=@${IPA_PATH}/${SCHEME_NAME}.ipa" \
+# -F "x:name=$APP_NAME" \
+# -F "x:version=${VERSION_NUMBER}" \
+# -F "x:build=${BUILD_NUMBER}" \
+# -F "x:release_type=Adhoc" \
+# -F "x:changelog=${UpdateDescription}" \
+# https://up.qbox.me`
+
+# is_completed=$(echo $FIR_UPLOAD_RESULT | jq -r '.is_completed')
+
+# if [ "$is_completed" = true ]; 
+#     then
+#     echo "============ Upload fir.im Success ====================="
+#     else
+#     echo "============ Upload fir.im Fail ========================"
+# fi
 
 
 # 结束传包计时
@@ -217,7 +252,7 @@ echo
 
 ## Unity 的 C# 脚本
 
-`ExportProject.cs` 文件如下
+`ExportProject.cs` 脚本需要放在 Unity 工程的 Assets/Editor 目录下，脚本内容如下
 
 <br>
 
@@ -273,3 +308,16 @@ public class ExportProject : MonoBehaviour
 }
 
 ```
+
+
+<br>
+
+可选
+
+自定义一个终端命令的别名，方便快速的执行打包命令，打开自己电脑的`/Users/电脑用户名/.zshrc`隐藏文件，将以下代码添加进去，保存，这样在终端只要执行`bar`命令即可开始打包
+
+``` shell
+alias bar='killall -9 sh; sh /Users/xxxxx.sh'
+```
+
+以上代码是两条命令合成一条，因为有时执行打包失败后再次执行，需要杀掉前一个sh命令的进程才能重新开始执行，真正打包的是第二条命令
