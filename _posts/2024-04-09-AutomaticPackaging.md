@@ -309,10 +309,9 @@ public class ExportProject : MonoBehaviour
 
 ```
 
-
 <br>
 
-可选
+## 可选
 
 自定义一个终端命令的别名，方便快速的执行打包命令，打开自己电脑的`/Users/电脑用户名/.zshrc`隐藏文件，将以下代码添加进去，保存，这样在终端只要执行`bar`命令即可开始打包
 
@@ -320,4 +319,7 @@ public class ExportProject : MonoBehaviour
 alias bar='killall -9 sh; sh /Users/xxxxx.sh'
 ```
 
-以上代码是两条命令合成一条，因为有时执行打包失败后再次执行，需要杀掉前一个sh命令的进程才能重新开始执行，真正打包的是第二条命令
+以上代码是两条命令合成一条:
+
+* `killall -9 sh` 的作用是杀掉和`sh`有关的进程，因为有时执行打包失败后再次执行，需要杀掉前一个`sh`的进程才能重新开始执行
+* `sh /Users/xxxxx.sh` 是真正打包的命令
