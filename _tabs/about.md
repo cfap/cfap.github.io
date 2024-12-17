@@ -8,7 +8,7 @@ order: 4
 
 ## 数学公式
 
-本博客所用主题的数学公式用 MathJax 渲染。MathJax 是一款运行在浏览器中的开源的数学符号渲染引擎，使用 MathJax 可以方便的在浏览器中显示数学公式，不需要使用图片。目前，MathJax 可以解析 Latex、MathML 和 AsciiMath 的标记语言。
+本博客所用主题的数学公式用 MathJax 渲染。MathJax 是一款运行在浏览器中的开源的数学符号渲染引擎，使用 MathJax 可以方便的在浏览器中显示数学公式，不需要使用图片。目前，MathJax 可以解析 LaTeX、MathML 和 AsciiMath 的标记语言。
 
 <br>
 
