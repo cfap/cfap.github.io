@@ -143,7 +143,7 @@ LDL 亚组分（按颗粒直径、密度）
 
 <br>
 
-![FH_1](FH_1.png){: .normal }
+![FH_1]({{ '/assets/img/FH_1.png' | relative_url }}){: .normal }
 
 <br>
 
@@ -266,27 +266,27 @@ ASCVD 是动脉粥样硬化性心血管疾病的缩写
 
 <br>
 
-![FH_2](FH_2.png)
+![FH_2]({{ '/assets/img/FH_2.png' | relative_url }})
 
 <br>
 
-![FH_3](FH_3.png)
+![FH_3]({{ '/assets/img/FH_3.png' | relative_url }})
 
 <br>
 
-![FH_4](FH_4.png)
+![FH_4]({{ '/assets/img/FH_4.png' | relative_url }})
 
 <br>
 
-![FH_5](FH_5.png)
+![FH_5]({{ '/assets/img/FH_5.png' | relative_url }})
 
 <br>
 
-![FH_6](FH_6.png)
+![FH_6]({{ '/assets/img/FH_6.png' | relative_url }})
 
 <br>
 
-![FH_7](FH_7.png)
+![FH_7]({{ '/assets/img/FH_7.png' | relative_url }})
 
 <br>
 
@@ -305,7 +305,7 @@ ASCVD 是动脉粥样硬化性心血管疾病的缩写
 
 从药品包装上字体大小，显眼程度来看：通用名称 > 商品名称
 
-![FH_8](FH_8.png){: .normal }
+![FH_8]({{ '/assets/img/FH_8.png' | relative_url }}){: .normal }
 
 <br>￼
 
